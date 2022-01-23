@@ -49,8 +49,9 @@ printf("파이썬 기초 공부하기");
   - 사전
     - 변수.get()
     - 변수[]
+      - **차이점**
       ```python
-      # 차이점)
+      # 사용 예제)
           dictionary = [9 : "토레스", 8 : "제라드", 10 : "메시", 7 : "호날두"]
           
           # If) 에러 발생시
@@ -66,6 +67,43 @@ printf("파이썬 기초 공부하기");
     - 값 확인하는 방법
       - key in 변수 ==> 있다면 True 출력.
       - key in 변수 ==> 없다면 Flase 출력.   
+    - Key 삽입 및 업데이트
+      ```python
+          cabinet = {"A-3" : "클래식 피지크", "A-4" : "보디빌딩"}   # {Key : Value}
+
+          # 새로운 Key 삽입
+          print(cabinet)
+          cabinet["C-7"] = "로이더!"    # C-7이 없는 Key 값이라면 "로이더!"가 저장되며,
+                                       # 만약 C-7이 사용중이면 "로이더!"로 새로 업데이트가 된다.
+          print(cabinet)
+          print(cabinet.get("C-7"))   
+      ```  
+     - del : Key 삭제
+      ```python
+          cabinet = {"A-3" : "클래식 피지크", "A-4" : "보디빌딩"}   # {Key : Value}
+         
+          # Key 삭제
+          print(cabinet)
+          del cabinet["A-4"]  # "A-4" Key 삭제.
+          print(cabinet)
+      ```  
+    - key들 확인 방법
+      ```python
+          print(cabinet.keys()) # dict_keys(['A-3', 'C-7'])로 출력.  
+      ```      
+    - Value들 확인 방법
+      ```python
+          print(cabinet.values()) # dict_values(['클래식 피지크', '로이더!'])로 출력.  
+      ``` 
+    - key, Value 쌍으로 확인 방법
+      ```python
+          print(cabinet.items()) # dict_items([('A-3', '클래식 피지크'), ('C-7', '로이더!')]) 
+      ```       
+    - Dictionary 포맷.
+      ```python
+          cabinet.clear()     # Dictionary 포맷
+          print(cabinet)      # Dictionary 포맷되어서 {} 출력.
+      ```
     - coming soon...:octocat: 
 - 공부자료
 > '유튜브 나도코딩'
