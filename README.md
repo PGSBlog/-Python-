@@ -66,7 +66,8 @@ printf("파이썬 기초 공부하기");
       ```  
     - 값 확인하는 방법
       - key in 변수 ==> 있다면 True 출력.
-      - key in 변수 ==> 없다면 Flase 출력.   
+      - key in 변수 ==> 없다면 Flase 출력. 
+        
     - Key 삽입 및 업데이트
       ```python
           cabinet = {"A-3" : "클래식 피지크", "A-4" : "보디빌딩"}   # {Key : Value}
@@ -79,14 +80,14 @@ printf("파이썬 기초 공부하기");
           print(cabinet.get("C-7"))   
       ```  
      - del : Key 삭제
-      ```python
+        ```python
           cabinet = {"A-3" : "클래식 피지크", "A-4" : "보디빌딩"}   # {Key : Value}
          
-      # Key 삭제
+        # Key 삭제
           print(cabinet)
           del cabinet["A-4"]  # "A-4" Key 삭제.
           print(cabinet)
-      ```  
+        ```  
     - key들 확인 방법
       ```python
           print(cabinet.keys()) # dict_keys(['A-3', 'C-7'])로 출력.  
