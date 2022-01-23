@@ -47,6 +47,23 @@ printf("파이썬 기초 공부하기");
           # 다른 리스트 명령도 1)과 같은 방식으로 정의해야함.
       ```     
   - 사전
+    - 변수.get()
+    - 변수[]
+      ```python
+      # 차이점)
+          dictionary = [9 : "토레스", 8 : "제라드", 10 : "메시", 7 : "호날두"]
+          
+          # If) 에러 발생시
+          
+          print(dictionary[999])        # 에러 발생 
+          print("Hello World")          # 출력 안됌         
+          -----------------------------
+          print(dictionary.get(999))    # 에러 발생
+          print("Hello World")          # 출력 됌.
+
+          # 차이가 있으니 알아둘 것.
+      ```  
+    -  
     - coming soon...:octocat: 
 - 공부자료
 > '유튜브 나도코딩'
