@@ -58,7 +58,7 @@ printf("파이썬 기초 공부하기");
           print(dictionary[999])        # 에러 발생 
           print("Hello World")          # 출력 안됌         
           -----------------------------
-          print(dictionary.get(999))    # 에러 발생
+          print(dictionary.get(999))    # 에러 대신 None 출력. 
           print("Hello World")          # 출력 됌.
 
           # 차이가 있으니 알아둘 것.
