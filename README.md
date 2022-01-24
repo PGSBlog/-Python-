@@ -185,6 +185,8 @@ printf("파이썬 기초 공부하기");
     # list ==> []
     # tuple ==> ()
     ```
+  - If문
+  - FOr문
   - coming soon...:octocat: 
 - 공부자료
 > '유튜브 나도코딩'
