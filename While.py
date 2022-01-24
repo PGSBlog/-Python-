@@ -47,5 +47,24 @@ print("오늘은? 여기까지")
 '''
 
 # 효율적인 for문 
+'''
+student = [1,2,3,4,5,6,7]
+print(student)
+student = [ i + 100 for i in student] # i 값에 100을 더하는데 i는 student에 있는 리스트 값들을 가져와 더한다는 의미이다.
+print(student)
+'''
 
- 
+# 학생들 이름을 길이로 변환
+'''
+student = ["qkrrltn", "qkrtkdcjf", "dhwjdals"] # "박기수", "박상철", "오정민"
+# student = [len(student)]          # 이러면 student안에 있는 리스트 갯수를 출력
+student = [len(i) for i in student] # 이렇게 해야 리스트 안에 있는 단어 각각의 길이를 출력할 수 있다.
+print(student)
+'''
+
+# 학생 이름을 대문자로 변환
+'''
+student = ["qkrrltn", "qkrtkdcjf", "dhwjdals"] # "박기수", "박상철", "오정민"
+student = [i.upper() for i in student] # upper다음 ()꼭 넣기 넣지 않으면 16진수로 출력됌.
+print(student)
+'''
