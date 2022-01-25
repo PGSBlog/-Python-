@@ -186,7 +186,8 @@ printf("파이썬 기초 공부하기");
     # tuple ==> ()
     ```
   - If문
-  - FOr문
+  - For문
+  - While문
   - coming soon...:octocat: 
 - 공부자료
 > '유튜브 나도코딩'
@@ -197,3 +198,14 @@ printf("파이썬 기초 공부하기");
 
 - [x] Python
 - [x] VS Code
+
+**git 오류 메세지**
+- Git: “Not currently on any branch.” 일때
+```git
+    git checkout -b newbranch # 새로운 임의의 branch 만든다.(현재 master(main)에 branch가 되지 않았기 때문에 새로 branch를 만들어 merge를 해야한다.)
+    git checkout master
+    git merge newbranch
+    git branch -d newbranch
+
+```
+> '참고자료' : https://poorman.tistory.com/409
