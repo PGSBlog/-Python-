@@ -209,3 +209,4 @@ printf("파이썬 기초 공부하기");
 
 ```
 > '참고자료' : https://poorman.tistory.com/409
+> 'rebase참고 자료' : https://mizzo-dev.tistory.com/entry/git-commit-edit
