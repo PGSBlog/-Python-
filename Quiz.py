@@ -91,7 +91,7 @@ print("--축하합니다.--")
 # 3. 랜덤 범위(randrange)함수를 사용해 랜덤 시간 표현
 # 4. 탑승객을 표기하기 위해 탑승객 함수 정의
 # 5. format 사용
-
+'''
 from random import *
 
 cnt = 0 # 총 탑승객
@@ -104,3 +104,64 @@ for i in range(1, 51, 1) : # 1 - 50명 승객
     else : # 매칭 실패
         print("[ ] {0}번째 손님 (소요시간 : {1}분)".format(i, time)) # 이때는 매칭이 실패한 경우라서 cnt에 1을 더하지 않는다.
 print("# 총 탑승 승객 : {0}분".format(cnt))
+'''
+# ------------------------------------------------------------------------------------------------------------------------------------
+
+# Quiz 4) 표준 체중을 구하는 프로그램을 작성하시오.
+
+# * 표준체중 : 각 개인의 키에 적당한 체중
+
+# (성별에 따른 공식)
+
+# 남자 : 키(m) X 키(m) X 22
+# 여성 : 키(m) X 키(m) X 21
+
+# 조건1 : 표준 체중은 별도의 함수 내에서 계산
+#         * 함수명 : std_weight
+#         * 전달값 : 키(height), 성별(gender)
+# 조건2 : 표준 체중은 소수점 둘째자리까지 표시
+
+# (출력 예제)
+# 키 175cm 남자의 표준 체중은 67.38kg입니다.
+# # 내가 한것 
+
+# weight = 0
+# height = float(input("키를 입력하시오 : "))
+# gender = str(input("성별을 입력하시오 : "))
+# def std_weight(height, gender):
+#     global weight
+#     if(gender == "남성"):
+#         weight = height * height * 22
+#         return weight
+#     elif(gender == "여성"):
+#         weight = height * height * 21
+#         return weight 
+# print("키 {0}의 평균 체중은 {1}.2f 입니다.".format(height, weight))
+
+# 답안지 
+# Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
+# def std_weight(height, gender):
+#     if(gender == "남성"):
+#         return height * height * 22 
+#     elif(gender == "여성"):
+#         return height * height * 21
+# height = 175
+# gender = "남성" 
+# weight = round(std_weight(height / 100, gender), 2)
+# print("키 {0}cm {1}의 평균 체중은 {2}kg입니다.".format(height, gender, weight))
+
+# 문제 복습 풀이 
+# Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
+
+def std_weight(height, gender):
+    if(gender == "남성"):
+        return height * height * 22
+    elif(gender == "여성"):
+        return height * height * 21
+height = int(input("키(cm)를 입력하시오 : "))
+gender = str(input("성별을 입력하시오 : "))
+weight = round(std_weight(height/100, gender), 2)
+print("키 {0}cm {1}의 평균 체중은 {2}kg 입니다.".format(height, gender, weight))
+
+# def을 사용할 때
+# Tip 소수 두번째자리 출력(자동 반올림됨.) : round를 사용하면 된다. => round(def한 함수, 2) 
