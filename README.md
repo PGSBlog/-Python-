@@ -280,7 +280,7 @@ printf("파이썬 기초 공부하기");
     # 문제 복습 풀이(최종본) 코드 부분
     def std_weight(height, gender):
     ...
-    weight = round(std_weight(height/100, gender), 2) # 소수 두번째자리 표기(반올림 )
+    weight = round(std_weight(height/100, gender), 2) # 소수 두번째자리 표기(반올림 적용됨)
     ```
   - 표준 입출력
   - coming soon...:octocat: 
