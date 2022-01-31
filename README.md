@@ -188,6 +188,28 @@ printf("파이썬 기초 공부하기");
   - If문
   - For문
   - While문
+  - 함수
+    - def
+     - 전달값  
+     - 반환값 
+     - 키워드 값
+     - 가변인자 값
+     - 기본값
+  - 지역변수 및 전역 변수
+    - 지역 변수 : 함수 내에서만 사용할 수 있는것.
+    ```python
+    # 지역변수에서 전역변수 정의 함수 사용 방법 : global
+    gun = 10 # 여기에만 gun을 할당하면 def안에 gun이 정의되지 않아 에러
+    def checkpoint(soldiers): # 경계 근무
+        global gun # 전역공간에 있는 gun을 사용한다.
+        gun = gun - soldiers
+        print("[함수 내] 남은 총 : {0}".format(gun))
+
+    print("[전체 총] : {0}".format(gun))
+    checkpoint(2) # 2명이 총을 들고 병기 근무 투입.
+    print("[남은 총] : {0}".format(gun))
+    ```
+    - 전역 변수 : 모든 공간 즉, 프로그램 내에서 모든 공간에서 부를수 있는 것.
   - coming soon...:octocat: 
 - 공부자료
 > '유튜브 나도코딩'
