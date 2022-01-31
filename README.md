@@ -273,6 +273,16 @@ printf("파이썬 기초 공부하기");
     # def을 사용할 때
     # Tip 소수 두번째자리 출력(자동 반올림됨.) : round를 사용하면 된다. => round(def한 함수, 2) 
     ```
+  - def에서 소수점 출력하는 법
+    - round함수 사용
+    ```python
+    # Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
+    # 문제 복습 풀이(최종본) 코드 부분
+    def std_weight(height, gender):
+    ...
+    weight = round(std_weight(height/100, gender), 2) # 소수 두번째자리 표기(반올림 )
+    ```
+  - 표준 입출력
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
