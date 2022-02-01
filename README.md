@@ -210,8 +210,9 @@ printf("파이썬 기초 공부하기");
     print("[남은 총] : {0}".format(gun))
     ```
     - 전역 변수 : 모든 공간 즉, 프로그램 내에서 모든 공간에서 부를수 있는 것.    
+- Quiz 4)
     ```python
-    # Quiz 4) 표준 체중을 구하는 프로그램을 작성하시오.
+    # 표준 체중을 구하는 프로그램을 작성하시오.
 
     # * 표준체중 : 각 개인의 키에 적당한 체중
 
@@ -228,7 +229,7 @@ printf("파이썬 기초 공부하기");
     # (출력 예제)
     # 키 175cm 남자의 표준 체중은 67.38kg입니다.
     ```
-  - 내가 한것
+- 내가 한것
     ```python
      weight = 0
      height = float(input("키를 입력하시오 : "))
@@ -243,7 +244,7 @@ printf("파이썬 기초 공부하기");
              return weight 
      print("키 {0}의 평균 체중은 {1}.2f 입니다.".format(height, weight))
     ```
-  - 답안지
+- 답안지
     ```python
     # Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
      def std_weight(height, gender):
@@ -256,7 +257,7 @@ printf("파이썬 기초 공부하기");
      weight = round(std_weight(height / 100, gender), 2)
      print("키 {0}cm {1}의 평균 체중은 {2}kg입니다.".format(height, gender, weight))
     ```
-  - 문제 복습 풀이(최종본)
+- 문제 복습 풀이(최종본)
     ```python
     # Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
 
@@ -321,7 +322,8 @@ printf("파이썬 기초 공부하기");
     ...
     with open("profile.pickle","rb") as profile_file : 
         print(pickle.load(profile_file))
-    ```- 답안지
+    ```
+- 답안지
     ```python
     # Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
      def std_weight(height, gender):
@@ -334,7 +336,7 @@ printf("파이썬 기초 공부하기");
      weight = round(std_weight(height / 100, gender), 2)
      print("키 {0}cm {1}의 평균 체중은 {2}kg입니다.".format(height, gender, weight))
     ```
-  - 문제 복습 풀이(최종본)
+- 문제 복습 풀이(최종본)
     ```python
     # Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
 
@@ -365,7 +367,7 @@ printf("파이썬 기초 공부하기");
     with open("{0}주차.txt".format(i), "r", encoding="utf8") as task_file :
         print(task_file.read())
     ```
-  - 답안지
+- 답안지
     ```python
         for i in range(1, 51):
     with open(str(i) + "주차 보고서", "w", encoding="utf8") as task_file:
