@@ -311,8 +311,70 @@ printf("파이썬 기초 공부하기");
     - 파일화된 것을 다른 사람이 쓸 수 있게 만들수 있다.
     - 작업할때 "wb"식으로 작성한다. 자세한건 아래 코드 참고  
     ```python
+    improt pickle
+    ...
     profile_file = open("profile.pickle", "wb") # 'w'는 write(쓰기) , 'b'는 binary이다.
     ```
+  - with : pickle과 같은 효과를 볼 수 있다 자세한 내용은 아래 코드를 참고.
+    ```python
+        improt pickle
+    ...
+    with open("profile.pickle","rb") as profile_file : 
+        print(pickle.load(profile_file))
+    ```- 답안지
+    ```python
+    # Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
+     def std_weight(height, gender):
+         if(gender == "남성"):
+             return height * height * 22 
+         elif(gender == "여성"):
+             return height * height * 21
+     height = 175
+     gender = "남성" 
+     weight = round(std_weight(height / 100, gender), 2)
+     print("키 {0}cm {1}의 평균 체중은 {2}kg입니다.".format(height, gender, weight))
+    ```
+  - 문제 복습 풀이(최종본)
+    ```python
+    # Tip 소수 두번째자리 출력 : round를 사용하면 된다. => round(def한 함수, 2) 
+
+    def std_weight(height, gender):
+        if(gender == "남성"):
+            return height * height * 22
+        elif(gender == "여성"):
+            return height * height * 21
+    height = int(input("키(cm)를 입력하시오 : "))
+    gender = str(input("성별을 입력하시오 : "))
+    weight = round(std_weight(height/100, gender), 2)
+    print("키 {0}cm {1}의 평균 체중은 {2}kg 입니다.".format(height, gender, weight))
+
+    # def을 사용할 때
+    # Tip 소수 두번째자리 출력(자동 반올림됨.) : round를 사용하면 된다. => round(def한 함수, 2) 
+    ```
+  
+  
+- 내가 푼 문제 풀이
+    ```python
+    for i in range(1, 51, 1) : 
+       with open("{0}주차.txt".format(i), "w", encoding="utf8") as task_file :
+           task_file.write("- {0}주차 주간보고 -".format(i))
+           task_file.write("\n부서 : ")
+           task_file.write("\n이름 : ")
+           task_file.write("\n업무요약 : ")
+        
+    with open("{0}주차.txt".format(i), "r", encoding="utf8") as task_file :
+        print(task_file.read())
+    ```
+  - 답안지
+    ```python
+        for i in range(1, 51):
+    with open(str(i) + "주차 보고서", "w", encoding="utf8") as task_file:
+        task_file.write("- {0}주차 주간보고 -".format(i))
+        task_file.write("\n부서 : ")
+        task_file.write("\n이름 : ")
+        task_file.write("\n업무요약 : ") 
+    ```
+  - 클래스
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
