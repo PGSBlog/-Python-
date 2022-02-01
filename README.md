@@ -311,7 +311,7 @@ printf("파이썬 기초 공부하기");
     - 파일화된 것을 다른 사람이 쓸 수 있게 만들수 있다.
     - 작업할때 "wb"식으로 작성한다. 자세한건 아래 코드 참고  
     ```python
-    profile_file = open("profile.pickle", "wb", encoding="utf8") # 'w'는 write(쓰기) , 'b'는 binary이다.
+    profile_file = open("profile.pickle", "wb") # 'w'는 write(쓰기) , 'b'는 binary이다.
     ```
   - coming soon...:octocat: 
 - 공부자료
