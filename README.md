@@ -308,7 +308,11 @@ printf("파이썬 기초 공부하기");
     # 파일을 항상 열었으면 닫아야한다.
     ```
   - Pockle : Pockle은 프로그램상에서 우리가 사용하고 있는 데이터를 파일화 해주는 작업
-    - 파일화된 것을 다른 사람이 쓸 수 있게 만들수 있다.  
+    - 파일화된 것을 다른 사람이 쓸 수 있게 만들수 있다.
+    - 작업할때 "wb"식으로 작성한다. 자세한건 아래 코드 참고  
+    ```python
+    profile_file = open("profile.pickle", "wb", encoding="utf8") # 'w'는 write(쓰기) , 'b'는 binary이다.
+    ```
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
