@@ -283,6 +283,21 @@ printf("파이썬 기초 공부하기");
     weight = round(std_weight(height/100, gender), 2) # 소수 두번째자리 표기(반올림 적용됨.)
     ```
   - 표준 입출력
+    - ljust(8) : ljust는 왼쪽으로 정렬. l = left,  8은 총 8칸으로 공간을 확보한 상태에서 왼쪽으로 정렬해달라.
+    - rjust(4) : rjust는 왼쪽으로 정렬. r = right, 4은 총 4칸으로 공간을 확보한 상태에서 오른쪽으로 정렬해달라.
+    - zfill(3) : zfill은 지정한 크기에 나머지 공간을 0으로 채운다. 즉, 3칸을 만들고 나머지 공백은 0으로 채워라.
+    ```python
+    # 시험 성적(딕셔너리{사잔})
+    ...
+    print(subject.ljust(8), str(score).rjust(4), sep=":") 
+    ```
+    ```python
+    # 은행 대기순번표
+    # ex) 001, 002 식으로
+    ...
+    for num in range(1, 21, 1):
+        print("대기번호 : " + str(num).zfill(3)) 
+    ```
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
