@@ -298,6 +298,17 @@ printf("파이썬 기초 공부하기");
     for num in range(1, 21, 1):
         print("대기번호 : " + str(num).zfill(3)) 
     ```
+  - 파일 입출력
+    ```python
+    score_file = open("score.txt","w", encoding="utf8") # 'w'는 write(쓰다)라는 목적 utf8을 해줘야 한글이 깨지지 않는다.
+    print("수학 : 0", file = score_file)
+    print("영어 : 50", file = score_file)
+    score_file.close()
+
+    # 파일을 항상 열었으면 닫아야한다.
+    ```
+  - Pockle : Pockle은 프로그램상에서 우리가 사용하고 있는 데이터를 파일화 해주는 작업
+    - 파일화된 것을 다른 사람이 쓸 수 있게 만들수 있다.  
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
