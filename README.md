@@ -377,6 +377,16 @@ printf("파이썬 기초 공부하기");
         task_file.write("\n업무요약 : ") 
     ```
   - 클래스
+    - init : Python에서 사용하는 생성자이다. 
+    ```python
+        class Unit:
+           def __init__(self, name, hp, damage): # def하고 바로 __하는게 아니라 한칸 띄우고 함. init은 다음장에서 설명함.
+               self.name = name
+                self.hp = hp
+                self.damage = damage
+                ...
+    ``` 
+    - 객체: 클래스로부터 만들어진 녀석들이다.
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
