@@ -381,12 +381,16 @@ printf("파이썬 기초 공부하기");
     ```python
         class Unit:
            def __init__(self, name, hp, damage): # def하고 바로 __하는게 아니라 한칸 띄우고 함. init은 다음장에서 설명함.
-               self.name = name
+                self.name = name
                 self.hp = hp
                 self.damage = damage
-                ...
+        marine1 = Unit("마린", 40, 5) # self를 제외하고 name, hp, damage를 정의했으면 동일한 갯수만큼 선언해야한다.
+        marine2 = Unit("마린", 40, 5)
+        tank1 = Unit("탱크", 150, 35)
+        tank2 = Unit("탱크", 150, 35)
     ``` 
     - 객체: 클래스로부터 만들어진 녀석들이다.
+    - instance : 클래스로부터 정의된 값들 # 즉 마린과, 탱크가 인스턴스이다.
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
