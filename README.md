@@ -429,6 +429,7 @@ printf("파이썬 기초 공부하기");
        firebat1.damaged(25)
                     
     ``` 
+  - 상속
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
