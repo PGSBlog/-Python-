@@ -429,7 +429,14 @@ printf("파이썬 기초 공부하기");
        firebat1.damaged(25)
                     
     ``` 
-  - 상속
+  - 상속 및 다중 상속
+    ```python
+        # Inheritance.py 참고하기               
+    ```
+  - 오버라이딩
+    ```python
+        # Overloading.py 참고하기               
+    ```
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
