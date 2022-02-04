@@ -79,3 +79,6 @@ class BuildingUnit(Unit):
         # 방법 2) super는 '()' 괄호를 써줘야하고 self는 작성하지 않는다. 자바의 super같은 개념임.
         super().__init__(name, hp, 0) # 단일 상속에서는 문제가 없지만 다중 상속에서는 문제가 좀 있다.
         self.location = location
+
+        #이것을 수정할 일이 있을까
+        
