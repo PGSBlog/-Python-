@@ -437,6 +437,57 @@ printf("파이썬 기초 공부하기");
     ```python
         # Overloading.py 참고하기               
     ```
+  - Pass : 클래스에서 사용할 때 클래스를 초기화 하지 않았어도 진행 시킬 수 있다.
+    ```python
+        class BuildingUnit(Unit):
+            def __init__(self, name, hp, location):
+                pass    # 원래는 Class에 상속을 받기위해 초기화를 선언해야하지만(클래스를 적고 __init__(여기에 값을 넣고 초기화했어햐한다.)
+                        # 사실 pass가 없고 이렇게 냅두면 선언해준것이 없으므로, 에러가 발생하지만 pass를 사용함으로서 이대로 진행시킨것이다. 
+
+        # 서플라이 디폿 : 건물, 1개 건물 = 8 유닛 차지함.               
+    ``` 
+  - super : 상속과 같은 기능이지만, 단 다중 상속일 땐 사용할 수없다.(다중 상속으로 클래스를 초기화해도 먼저 작성한 클래스만 초기화가 된다.)
+    ```python
+    # super 상속 예시)
+        class BuildingUnit(Unit):
+            def __init__(self, name, hp, location):
+        
+                # 방법 1)
+
+                # Unit.__init__(self, name, hp, 0) # 건물은 이동이 없으니 지상 속도를 0으로 함. 
+                # self.location = location 
+
+                # 방법 2) super는 '()' 괄호를 써줘야하고 self는 작성하지 않는다. 자바의 super같은 개념임.
+                super().__init__(name, hp, 0) # 단일 상속에서는 문제가 없지만 다중 상속에서는 문제가 좀 있다.
+                self.location = location               
+    ```
+    ```python
+    # super 다중 상속 예시) ==> 다중 상속을 할 수 없음.
+        class Unit():
+            def __init__(self):
+                print("Unit 생성자")
+
+        class Flyable():
+            def __init__(self):
+                print("Flyable 생성자")
+
+        class FlyableUnit(Unit, Flyable):
+            def __init__(self):
+                # super().__init__() # 다중 상속을 하려고 했지만 마지막에 있는 클래스는 정의 되지 않는다.
+        
+                # 다중 상속일 땐, 아래처럼 해야한다.
+                Unit.__init__(self)
+                Flyable.__init__(self)
+
+        # 드랍쉽으로 예제를 보이면...
+
+        dropship = FlyableUnit() # 즉, Unit class에 투입돼 초기화가 되었지만 Flyable class에는 투입되지않아 초기화 되지 않았다.
+        # 출력물 : Unit 생성자
+
+                                # 반대로 FlyableUnit(Unit, Flyable) --> FlyableUnit(Flyable, Unit)하면 
+        # 출력물 : Flyable 생성자
+                                # Flyable class에 투입돼 초기화가 되었지만  Unit class에는 투입되지않아 초기화 되지 않았다.              
+    ```
   - coming soon...:octocat: 
 - 공부자료
 > :tv: [유튜브](https://youtu.be/kWiCuklohdY)
