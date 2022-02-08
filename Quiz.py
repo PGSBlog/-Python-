@@ -168,37 +168,107 @@
 
 # ------------------------------------------------------------------------------------------------------------------------------------
 
-# 퀴즈 5) 당신의 회사에서는 매주 1회 작성해야 하는 보고서가 있습니다.
-# 보고서는 항상 아래와 같은 형태로 출력되어야 합니다.
+# # 퀴즈 5) 당신의 회사에서는 매주 1회 작성해야 하는 보고서가 있습니다.
+# # 보고서는 항상 아래와 같은 형태로 출력되어야 합니다.
 
-# -x 주차 주간보고-
-# 부서 : 
-# 이름 : 
-# 업무요약 :
+# # -x 주차 주간보고-
+# # 부서 : 
+# # 이름 : 
+# # 업무요약 :
 
-# 1주차부터 50주차까지의 보고서 파일을 만드는 프로그램을 작성하시오.
+# # 1주차부터 50주차까지의 보고서 파일을 만드는 프로그램을 작성하시오.
 
-# 조건 : 파일명은 '1주차.txt' , '2주차.txt', ...와 같이 만듭니다.
-# hint : 1 ~ 50주차는 for i in range(1, 51, 1) : 쓰면 됌.
+# # 조건 : 파일명은 '1주차.txt' , '2주차.txt', ...와 같이 만듭니다.
+# # hint : 1 ~ 50주차는 for i in range(1, 51, 1) : 쓰면 됌.
 
-# 내가 푼 문제 풀이
-for i in range(1, 51, 1) : 
-    with open("{0}주차.txt".format(i), "w", encoding="utf8") as task_file :
-        task_file.write("- {0}주차 주간보고 -".format(i))
-        task_file.write("\n부서 : ")
-        task_file.write("\n이름 : ")
-        task_file.write("\n업무요약 : ")
+# # 내가 푼 문제 풀이
+# for i in range(1, 51, 1) : 
+#     with open("{0}주차.txt".format(i), "w", encoding="utf8") as task_file :
+#         task_file.write("- {0}주차 주간보고 -".format(i))
+#         task_file.write("\n부서 : ")
+#         task_file.write("\n이름 : ")
+#         task_file.write("\n업무요약 : ")
         
-with open("{0}주차.txt".format(i), "r", encoding="utf8") as task_file :
-    print(task_file.read())
+# with open("{0}주차.txt".format(i), "r", encoding="utf8") as task_file :
+#     print(task_file.read())
 
-# 답안지 
+# # 답안지 
 
-for i in range(1, 51):
-    with open(str(i) + "주차 보고서", "w", encoding="utf8") as task_file:
-        task_file.write("- {0}주차 주간보고 -".format(i))
-        task_file.write("\n부서 : ")
-        task_file.write("\n이름 : ")
-        task_file.write("\n업무요약 : ") 
+# for i in range(1, 51):
+#     with open(str(i) + "주차 보고서", "w", encoding="utf8") as task_file:
+#         task_file.write("- {0}주차 주간보고 -".format(i))
+#         task_file.write("\n부서 : ")
+#         task_file.write("\n이름 : ")
+#         task_file.write("\n업무요약 : ") 
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+
+# # 퀴즈 6) 주어진 코드를 활용하여 부동산 프로그램을 작성하시오.
+
+# # (출력 예제)
+
+# # 총 3대의 매물이 있습니다.
+# # 강남 아파트 매매 10억 2010년
+# # 마포 오피스텔 전세 5억 2007년
+# # 송파 빌라 월세 500/50 2000년
+
+# # [코드]
+# # class House : 
+# #     # 매물 초기화 
+# #     def __init__(self, location, house_type, deal_type, price, completion_year):
+# #         pass
+
+# #     # 매물 정보 표시
+# #     def show_detail(self):
+# #         pass
 
     
+
+# class House : 
+#     # 매물 초기화
+#     # 먼저 ()안에 있는 함수들을 맴버변수로 초기화 해준다. 
+#     def __init__(self, location, house_type, deal_type, price, completion_year):
+#         self.location = location
+#         self.house_type = house_type
+#         self.deal_type = deal_type
+#         self.price = price
+#         self.completion_year = completion_year
+
+#     # 매물 정보 표시
+#     # self로 초기환 변수들을 print로 출력한다.
+#     def show_detail(self):
+#         print(self.location, self.house_type, self.deal_type, self.price, self.completion_year)
+
+# # 그 다음 House라는 리스트를 만들어 그것은 안에 기입한다.
+# # 강남 아파트 매매 10억 2010년
+# # 마포 오피스텔 전세 5억 2007년
+# # 송파 빌라 월세 500/50 2000년
+
+# houses = []
+# house1 = House("강남", "아파트", "매매", "10억", "2010년") # class House의 (self, location, house_type, deal_type, price, completion_year)를 기입함.
+# house2 = House("마포", "오피스텔", "전세", "5억", "2007년")
+# house3 = House("송파", "빌라", "월세", "500/50", "2000년")
+# houses.append(house1)
+# houses.append(house2)
+# houses.append(house3)
+
+# print("총 {0}대의 매물이 있습니다.".format(len(houses))) # 리스트 {0} , {1} , {2}에 저장된 house1, house2, house3이 들어가 있다.
+
+# for house in houses:
+#     house.show_detail()
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+
+# 퀴즈 7) 프로젝트 내에 나만의 시그니처를 남기는 모듈을 만드시오.
+# 조건 : 모듈 파일명은 byme.py 로 작성
+
+# (모듈 사용 예제)
+# import byme
+# byme.sign()
+# 
+# (출력 예제)
+# 이 프로그램은 박기수님의 의해 제작되었습니다.
+# 이메일 :qkrrltn990815@gmail.com 
+
+import Byme
+Byme.sign()
