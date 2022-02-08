@@ -488,9 +488,42 @@ printf("파이썬 기초 공부하기");
         # 출력물 : Flyable 생성자
                                 # Flyable class에 투입돼 초기화가 되었지만  Unit class에는 투입되지않아 초기화 되지 않았다.              
     ```
+  - 예외 처리 : 에러가 발생하여 강제 종료가 되면 어느 부분에서 에러인지 모르니 그 부분을 확인하기 위함.
+    - Finally : 마지막 구문으로 출력할 수 있게 사용. 
   - coming soon...:octocat: 
+  - 모듈 : 필요한 것들끼리 묶음처럼 사용하는 타입
+  - 패키지 : 모듈들을 모아둔 집합
+    - import : import 뒤에는 모듈, 패키지만 올수 있다. // 클래스, 함수는 올 수 없다.
+    ```python       
+        # Package를 사용해 모듈 출력
+        # 주의할 점 : import를 쓸때는 맨뒤에 모듈, 패키지만 사용할 수 있다. // 클래스나 함수는 사용할 수 없다.
+        # Ex) import Travel.USA(모듈)  
+        import Travel.USA
+        trip_to = Travel.USA.USAPackage()
+        trip_to.detail()
+    ```
+    - from import : from import를 사용하면 클래스를 사용할 수 있다.   
+    ```python              
+        # from import는 사용할 수 있다.
+        # from 구문에선는 import를 사용할 때 클래스, 함수도 사용할 수 있다.
+        from Travel.USA import USAPackage
+        trip_to = Travel.USA.USAPackage()
+        trip_to.detail()
+
+    ```
+- inspect : 경로 위치를 찾을 때 사용한다.
+    ```python              
+        import inspect
+        import random
+        print(inspect.getfile(random))
+        print(inspect.getfile(USA))
+        # 출력물 : C:\Users\qkrrl\AppData\Local\Programs\Python\Python310\lib\random.py
+        # 출력물 : c:\Python\PythonProjects\Travel\USA.py
+    ```
 - 공부자료
-> :tv: [유튜브](https://youtu.be/kWiCuklohdY)
+>  :dash: [프로젝트 오픈 소스 파이썬 자료](https://pypi.org/search/)
+
+>  :tv: [유튜브](https://youtu.be/kWiCuklohdY)
 
 **사용한 언어**
 
