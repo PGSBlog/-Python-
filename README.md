@@ -526,6 +526,7 @@ printf("파이썬 기초 공부하기");
      - pip 패키지 최신버전 설치 : pip install --upgrade 패키지명
    - 내장함수 : 내장되어 있기에 따로 import할 필요가 없다.
 >  :dash: [내장함수 관련 자료](https://docs.python.org/3/library/functions.html)
+
 >  :dash: [외장함수 관련 자료](https://docs.python.org/3/py-modindex.html)
 - 공부자료
 >  :dash: [프로젝트 오픈 소스 파이썬 자료](https://pypi.org/search/)
